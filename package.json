@@ -24,6 +24,7 @@
   "homepage": "https://github.com/LambdaSchool/Sprint-Challenge-Node-Express#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "event-stream": "^4.0.1",
     "express": "^4.16.4",
     "helmet": "^3.16.0",
     "knex": "^0.15.2",
