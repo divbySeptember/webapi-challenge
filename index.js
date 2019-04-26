@@ -1,14 +1,25 @@
-/*
-play this: https://www.youtube.com/watch?v=d-diB65scQU
+const express = require('express');
+const logger = require('morgan');
+const cors = require('cors');
+const helmet = require('helmet');
+const port = 8000;
 
-Sing along:
+const projectRoutes = require ('./projects/projectRoutes.js')
+const actionRoutes = require('./actions/actionRoutes.js')
+const server = express();
 
-here's a little code I wrote, you might want to read it really slow, don't worry be happy
-in every line there may be trouble, but if you worry you make it double, don't worry, be happy
-ain't got no sense of what is REST? just concentrate on learning Express, don't worry, be happy
-your file is getting way too big, bring a Router and make it thin, don't worry, be crafty
-there is no data on that route, just write some code, you'll sort it out… don't worry, just API…
-I need this code, just don't know where, perhaps should make some middleware, don't worry, be happy
+server.use(express.json());
+server.use(cors());
+server.use(helmet());
+server.use(logger("combined"));
 
-Go code!
-*/
+//Routes
+server.get('/', (req, res) => {
+  res.send('<h1>Welcome to Projects</h1>')
+})
+
+server.use('/api/projects', projectRoutes);
+server.use('/api/actions', actionRoutes)
+
+server.listen(port, () =>
+console.log(`\n=== I am running the API on port ${port} ===\n`))
