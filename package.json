@@ -1,8 +1,8 @@
 {
-  "name": "sprint-challenge-node-express",
+  "name": "webapi-challenge",
   "version": "1.0.0",
-  "description": "- Please open the `Review.md` file and answer the questions.\r - Use Node.js and Express to design and build an API that performs CRUD operations on **projects** and **actions**.",
-  "main": "knexfile.js",
+  "description": "Web API Challenge",
+  "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",
     "start": "node index.js",
@@ -10,14 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abravebee/Sprint-Challenge-Node-Express.git"
+    "url": "git+https://github.com/LambdaSchool/Sprint-Challenge-Node-Express.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "webapi",
+    "unit",
+    "challenge"
+  ],
+  "author": "Lambda School",
   "bugs": {
-    "url": "https://github.com/abravebee/Sprint-Challenge-Node-Express/issues"
+    "url": "https://github.com/LambdaSchool/Sprint-Challenge-Node-Express/issues"
   },
-  "homepage": "https://github.com/abravebee/Sprint-Challenge-Node-Express#readme",
+  "homepage": "https://github.com/LambdaSchool/Sprint-Challenge-Node-Express#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.16.4",
@@ -28,6 +32,7 @@
     "sqlite3": "^4.0.2"
   },
   "devDependencies": {
+    "knex-cleaner": "^1.1.4",
     "nodemon": "^1.18.4"
   }
 }
